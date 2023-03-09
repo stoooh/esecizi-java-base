@@ -1,6 +1,5 @@
 package javabasics._12;
 
-import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
@@ -69,9 +68,18 @@ public class Main {
      */
     public static double exercise2(String mealType, double weight, double expectedScore) {
         double yourMealScore = 0;
-        // Start your code here
 
-        // End it here
+        if(mealType.equals("sandwich")) {
+            yourMealScore = 5 * weight;
+        }
+
+        if(mealType.equals("soup")) {
+            yourMealScore = 3 * weight;
+        }
+
+        if(yourMealScore < 5){
+            yourMealScore += 2;
+        }
 
         System.out.print("Expected score=" + expectedScore +", actual score=" + yourMealScore);
         if (expectedScore != yourMealScore) {
