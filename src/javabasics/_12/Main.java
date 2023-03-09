@@ -1,5 +1,7 @@
 package javabasics._12;
 
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Exercise 1 - String score:");
@@ -27,11 +29,24 @@ public class Main {
      *    If the score is now over 20, times it by 2
      */
     public static double exercise1(String text, double expectedScore) {
-        double yourScore = 0;
+        double yourScore;
 
-        // Start your code here
+        yourScore = text.length();
 
-        // End it here
+        if(yourScore > 20){
+            yourScore = 20;
+        }
+
+        if(text.contains("a"))
+            yourScore -= 5;
+
+        String textInLowerCase = text.toLowerCase();
+        if(textInLowerCase.equals(text))
+            yourScore += 10;
+
+        if(yourScore > 20) {
+            yourScore *= 2;
+        }
 
         System.out.print("Expected score=" + expectedScore +", actual score=" + yourScore);
         if (expectedScore != yourScore) {
