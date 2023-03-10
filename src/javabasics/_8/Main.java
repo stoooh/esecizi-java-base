@@ -31,14 +31,14 @@ public class Main {
      */
     private static void exercise2() {
         System.out.println("\nExercise 2a:");
-        var ourChar = "00145";
-        String ourCharString = String.valueOf(ourChar).toUpperCase(); // <--- Change this line
+        char ourChar = 'a';
+        String ourCharString = String.valueOf(ourChar).toUpperCase();
 
-        System.out.println(ourCharString.charAt(3));
+        System.out.println(ourCharString.charAt(0));
 
         System.out.println("\nExercise 2b:");
         String anotherString = "Hello world";
-        int charAtIndex = 3; // <--- Change this line
+        int charAtIndex = 6; // <--- Change this line
         System.out.println("Make this print 'w' -> current result: '" + anotherString.charAt(charAtIndex) + "'");
     }
 
@@ -77,15 +77,18 @@ public class Main {
     private static void exercise4() {
         System.out.println("\nExercise 4:");
         String startStr = "5";
-        var stringInt = Integer.valueOf(startStr);
+
+        int stringInt = Integer.valueOf(startStr);
         System.out.println(stringInt);
+
         int multiply = stringInt * 2;
         System.out.println(multiply);
-        var integerInt = String.valueOf(multiply);
-        String concatenate = integerInt + integerInt;
-        System.out.println(concatenate);
 
-        var doubleString = Integer.valueOf(concatenate);
+        String concatenate = String.valueOf(multiply);
+        String concatenateInteger = concatenate + concatenate;
+        System.out.println(concatenateInteger);
+
+        double doubleString = Integer.valueOf(concatenateInteger);
         double divide = doubleString / 3.5;
 
         System.out.println(Math.floor(divide));
