@@ -42,11 +42,11 @@ public class Main {
      */
     private static void exercise2() {
         System.out.println("\nExercise 2:");
-       double var1 = 33.33;
-       var1 *= 2;
-       System.out.println(var1);
-        var1 /= 2;
-        System.out.println(var1);
+       double num = 33.33;
+       double moltiplicate = num * 2;
+       System.out.println(moltiplicate);
+       double divide = num / 2;
+        System.out.println(divide);
     }
 
     /**
@@ -84,7 +84,7 @@ public class Main {
     private static void exercise4Bonus() {
         System.out.println("\nExercise 4:");
         int age = 10;
-        age+=5;
+        age++;age++;age++;age++;age++;
         System.out.println(age);
     }
 
