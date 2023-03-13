@@ -2,6 +2,7 @@ package javabasics._14;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,18 +26,31 @@ public class Main {
 
         int sumForA = 0;
 
-        // Write your code for 1a here
+        for(int num : itemsA) {
+            sumForA += num;
+        }
+        System.out.println(sumForA);
+
+
         System.out.println("\nExercise 1b:");
         int[] itemsB = new int[]{1, 56, 23};
 
         int sumForB = 0;
 
-        // Write your code for 1b here
+        for(int num : itemsB) {
+            sumForB += num;
+        }
+        System.out.println(sumForB);
+
+
         System.out.println("\nExercise 1c:");
 
         int sumForC = 0;
 
-        // Write your code for 1c here, refer back to the lesson to check the fori syntax
+        for (int i = 0; i < sumForC; i++) {
+
+        }
+        System.out.println(sumForC);
 
         if (sumForA != sumForB || sumForB != sumForC) {
             System.out.println("Failed, sums are different!");

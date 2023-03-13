@@ -43,8 +43,8 @@ public class Main {
     private static void exercise2() {
         System.out.println("\nExercise 2:");
        double num = 33.33;
-       double moltiplicate = num * 2;
-       System.out.println(moltiplicate);
+       num = num*2;
+       System.out.println(num);
        double divide = num / 2;
         System.out.println(divide);
     }
