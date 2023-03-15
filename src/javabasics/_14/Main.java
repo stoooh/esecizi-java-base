@@ -9,6 +9,8 @@ public class Main {
         exercise1();
         exercise2();
         exercise3();
+        exercise4();
+        exercise5();
     }
 
     /**
@@ -47,8 +49,8 @@ public class Main {
 
         int sumForC = 0;
 
-        for (int i = 0; i < sumForC; i++) {
-
+        for (int i = 0; i < itemsB.length; i++) {
+            sumForC += itemsB[i];
         }
         System.out.println(sumForC);
 
@@ -66,28 +68,32 @@ public class Main {
     private static void exercise2() {
         List<Integer> items = Arrays.asList(300, 23, 56, 55, 84);
         int minNumber = Integer.MAX_VALUE;
-        int maxNumber = 0;
+        int maxNumber = 0;                 //perche maxNumber sta a 0? non ci va Integer.MIN_VALUE? e poi a cosa servono MAX e MIN?
 
-        // Write code here
+        for(int num : items){
+            maxNumber = Math.max(maxNumber, num);
+            minNumber = Math.min(minNumber, num);
+        }
+        System.out.println("the smallest number is " + minNumber + " and the largest number is " + maxNumber);
     }
 
     /**
-     * 3: Edit the fori loop below so it only prints the first 2 names.
+     * 3: Edit the for i loop below so it only prints the first 2 names.
      */
     private static void exercise3() {
         List<String> names = Arrays.asList("Alan", "Alice", "Antonio", "Aziz");
 
         for (
                 int index = 0;
-                index < names.size(); // <---- Edit this line
-                index = index + 1
+                index < names.size() - 2; // <---- Edit this line
+                index++
         ) {
             System.out.println(names.get(index));
         }
     }
 
     /**
-     * 4: Edit the fori loop below so it prints the 8 multiplication table
+     * 4: Edit the for i loop below so it prints the 8 multiplication table
      * <p>
      * Bonus, how could we use a single variable to change our times table?
      * <p>
@@ -98,12 +104,13 @@ public class Main {
      */
     private static void exercise4() {
         for (
-                int timesTableCurrentValue = 5; // <---- Edit this line
-                timesTableCurrentValue <= 50; // <---- Edit this line
-                timesTableCurrentValue = timesTableCurrentValue + 5 // <---- Edit this line
+                int timesTableCurrentValue = 8; // <---- Edit this line
+                timesTableCurrentValue <= 80; // <---- Edit this line
+                timesTableCurrentValue+=8 // <---- Edit this line
         ) {
             System.out.println(timesTableCurrentValue);
         }
+
     }
 
     /**
@@ -118,7 +125,10 @@ public class Main {
      */
     private static void exercise5() {
         for (int timesTableNumber = 1; timesTableNumber <= 10; timesTableNumber++) {
-            // Your fori loop here
+           System.out.println("moltiplication table for " + timesTableNumber + "=");
+            for (int i = 0; i <= 10; i++){
+                System.out.println(timesTableNumber + " * " + i + " = " + (timesTableNumber * i));
+            }
         }
     }
 }
