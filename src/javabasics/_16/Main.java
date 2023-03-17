@@ -67,7 +67,12 @@ public class Main {
         String lunchType = "sandwich";
         String description = "Nice big sandwich";
         int weightInGrams = 500;
+        String lunch = "the price of the lunch is: " + myLunchPrice + "\nthe type of lunch is: " + lunchType
+                + "\ndescription: " + description + "\nweight in grams: " + weightInGrams;
+        print(lunch);
 
-        // Call your function
+    }
+    private static void print(String function){
+        System.out.println(function);
     }
 }
