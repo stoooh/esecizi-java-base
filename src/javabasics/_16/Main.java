@@ -8,6 +8,7 @@ public class Main {
         exercise1();
         exercise2();
         exercise3();
+
     }
 
     /**
@@ -20,12 +21,14 @@ public class Main {
      */
     private static void exercise1() {
         System.out.println("Exercise 1:");
-        // Put this into a function
+        String conversionDescription = calculateConversion();
+        System.out.println(conversionDescription);
+    }
+
+    private static String calculateConversion(){
         double celsius = 30;
         double fahrenheit = ((celsius * 9) / 5) + 32;
-        String conversionDescription = celsius + " Celsius is " + fahrenheit + " fahrenheit";
-        // End
-        System.out.println(conversionDescription);
+        return celsius + " Celsius is " + fahrenheit + " fahrenheit";
     }
 
     /**
@@ -41,9 +44,18 @@ public class Main {
         List<String> names = Arrays.asList("Alan   ", "Alice   ", "Ant0ni0   ", "  Aziz");
 
         for (String name : names) {
-            // Call your function
+            String printName = printNameFunction(name);
+            System.out.println(printName);
         }
     }
+        private static String printNameFunction(String name) {
+            if (name.matches(".*[0-9].*")) {
+                return "INVALID";
+            } else {
+                return name.trim().toUpperCase();
+            }
+        }
+
 
     /**
      * 3: Write a function that prints out every variable seen in the code. It should not return anything
