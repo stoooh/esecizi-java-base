@@ -32,9 +32,11 @@ public class Main {
         numbers.add(95);
 
         System.out.println(numbers.get(0));
+        System.out.println(numbers.get(1));
+        System.out.println(numbers.get(2));
         numbers.remove(0);
-        numbers.remove(1);
-        numbers.remove(2);
+        numbers.remove(0);
+        numbers.remove(0);
         System.out.println(numbers);
 
     }
@@ -64,6 +66,8 @@ public class Main {
         menuPrices.add(4.50);
 
         System.out.println("the menu with " + menuItems.get(0) + " cost "  + "€" +menuPrices.get(0));
+        System.out.println("the menu with " + menuItems.get(1) + " cost "  + "€" +menuPrices.get(1));
+        System.out.println("the menu with " + menuItems.get(2) + " cost "  + "€" +menuPrices.get(2));
 
     }
 
