@@ -78,13 +78,13 @@ public class Main {
      * A Example: fori
      *
      * Q1: A user inputs their actions into an ATM, they can withdraw, deposit, check balance or exit. What loop should we use?
-     * A1:
+     * A1:do while because he can choose different options until he enters a password to carry out operations
      *
      * Q2: We have a list of 1000 users to send emails to
-     * A2:
+     * A2: for each because if the users are in an array is more appropriate and easy as compared to fori
      *
      * Q3: We want to print out the first 80 customer names from our bank database
-     * A3:
+     * A3:fori
      *
      * Q4: We want to read a file 100 lines at a time, without loading the full file into our program
      * A4:
