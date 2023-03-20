@@ -53,10 +53,10 @@ public class Main {
 
 
         int age = 30;
-        double eurosInPocket = 9;
+        double eurosInPocket = 11;
         double eurosForEntry = 10.0;
 
-        if ((age>=18) && (shoeType == "fancy") && (eurosInPocket >= eurosForEntry)){
+        if (age>=18 && shoeType.equals("fancy")  && eurosInPocket >= eurosForEntry){
             System.out.println("you can enter");
         }
         else {
@@ -79,28 +79,32 @@ public class Main {
      */
     private static void exercise3() {
         System.out.println("\nExercise 3 - Test Grader:");
-        double ourTestScore = 8.7;
+        double ourTestScore = 8;
         double maxTestScore = 10;
         boolean isTestRetry = true;
-        if (ourTestScore >= 9){
-            System.out.println('A');
-        }
-        else if (ourTestScore >= 8 && ourTestScore < 9){
-            System.out.println('B');
-        }
-
-        else if (ourTestScore >= 7 && ourTestScore < 8){
-            System.out.println('C');
-        }
-
-        else if (ourTestScore >= 6 && ourTestScore < 7){
+                                                                       //non capisco perche non funziona
+        if (isTestRetry) {
+            if (ourTestScore >= 7 && ourTestScore < 8){
+                System.out.println('C');
+        } else if (ourTestScore >= 6 && ourTestScore < 7) {
             System.out.println('D');
-        }
-
-        else if (ourTestScore < 6){
+        } else if (ourTestScore < 6) {
             System.out.println('F');
         }
-
+    }
+        if (!isTestRetry) {
+            if (ourTestScore >= 9) {
+                System.out.println('A');
+            } else if (ourTestScore >= 8 && ourTestScore < 9) {
+                System.out.println('B');
+            } else if (ourTestScore >= 7 && ourTestScore < 8) {
+                System.out.println('C');
+            } else if (ourTestScore >= 6 && ourTestScore < 7) {
+                System.out.println('D');
+            } else if (ourTestScore < 6) {
+                System.out.println('F');
+            }
+        }
     }
 
 
