@@ -43,12 +43,12 @@ public class Main {
      *    short = -32,768 to 32,768
      *    byte = -127 to 127
      *
-     *    2a: Someone's age                                                    int
+     *    2a: Someone's age                                                    byte
      *    2b: The age of a baby in months                                      short
      *    2c: Money in a hedgefund in euros                                    long
      *    2d: Price of a good in euros on amazon.com                           int
      *    2e: The exact weight of an apple measured by scientific equipment    float
-     *    2f: The number of kilometers from any 2 places in the world          long
+     *    2f: The number of kilometers from any 2 places in the world          int
      */
 
     /**
@@ -68,7 +68,32 @@ public class Main {
         {
             System.out.println("Exercise 3:");
         }
-        LocalDate localDate = LocalDate.of(2023, 12, 6);
-        System.out.println(localDate);
+        LocalDate currentDate = LocalDate.now();
+        System.out.println("current date: " + currentDate);
+
+        int dayOfMonth = currentDate.getDayOfMonth();
+        System.out.println("day of the month: " + dayOfMonth);
+
+        String dayOfWeek = String.valueOf(currentDate.getDayOfWeek());
+        System.out.println("day of the week: " + dayOfWeek);
+
+        int dayOfYear = currentDate.getDayOfYear();
+        System.out.println("day of the year: " + dayOfYear);
+
+        String month = String.valueOf(currentDate.getMonth());
+        System.out.println("month: " + month);
+
+        int monthValue = currentDate.getMonthValue();
+        System.out.println("month number: " + monthValue);
+
+        LocalDate date1 = LocalDate.of(2030, 12, 28);
+        LocalDate date2 = LocalDate.of(2000, 12, 28);
+
+        if(currentDate.isAfter(date2)){
+            System.out.println("we are in the future");
+        } else if(currentDate.isBefore(date1)){
+            System.out.println("we are in the past");
+
+        }
     }
 }
