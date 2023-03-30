@@ -11,7 +11,6 @@ public class Exercises {
         exercise3();
         exercise4();
     }
-
     /**
      * 1: Create variables with the MINIMUM POSSIBLE scope for currentCount and totalCount (both ints)
      */

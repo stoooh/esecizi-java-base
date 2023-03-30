@@ -12,8 +12,8 @@ public class Student {
     private int counter = 0;
 
     public Student(int age, String name, String gender, String section, String subject) {
-        setAge(age);
         setName(name);
+        setAge(age);
         setGender(gender);
         setSection(section);
         setSubject(subject);
